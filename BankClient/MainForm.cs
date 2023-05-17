@@ -29,7 +29,6 @@ namespace BankClient
             logInForm.ShowDialog();
             User = GetUserFromLogIn(logInForm);
             logInForm.Close();
-            //listBox1.Items.Clear();
             PhoneNumberLable.Text = User.Telephone;
             MoneyLabel.Text = User.Money.ToString() + " $";
         }
@@ -76,7 +75,6 @@ namespace BankClient
 
             string msg = Client.AddMoney(User.Id, sum);
             User.Money += sum;
-            //listBox1.Items.Add(msg);
             MoneyLabel.Text = User.Money.ToString() + " $";
         }
 
@@ -101,7 +99,6 @@ namespace BankClient
 
             string msg = Client.WithdrawMoney(User.Id, sum);
             User.Money -= sum;
-            //listBox1.Items.Add(msg);
             MoneyLabel.Text = User.Money.ToString() + " $";
         }
 
@@ -134,14 +131,12 @@ namespace BankClient
                 return;
             }
             
-            //listBox1.Items.Add(msg);
             User.Money -= sum;
             MoneyLabel.Text = User.Money.ToString() + " $";
         }
 
         public void GettingMoney(Transaction transaction)
         {
-            //listBox1.Items.Add($"Отримання коштів від {transaction.TelephoneFrom} в розмірі {transaction.Money} грн.");
             User.Money += transaction.Money;
             MoneyLabel.Text = User.Money.ToString() + " $";
         }

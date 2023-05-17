@@ -29,9 +29,9 @@ namespace BankClient
             logInForm.ShowDialog();
             User = GetUserFromLogIn(logInForm);
             logInForm.Close();
-            listBox1.Items.Clear();
+            //listBox1.Items.Clear();
             PhoneNumberLable.Text = User.Telephone;
-            MoneyLabel.Text = User.Money.ToString() + " грн";
+            MoneyLabel.Text = User.Money.ToString() + " $";
         }
 
 
@@ -64,20 +64,20 @@ namespace BankClient
 
             if (sum <= 0)
             {
-                MessageBox.Show("Сума не може бути від'ємним числом!");
+                MessageBox.Show("MUST BE POSITIVE");
                 return;
             }
 
             if (sum > 10000)
             {
-                MessageBox.Show("За 1 раз рахунок можна поповнити не більше ніж на суму 10.000 грн!\nОперація відмінена");
+                MessageBox.Show("MUST BE NOT MORE THAN 10000\nCANCELED");
                 return;
             }
 
             string msg = Client.AddMoney(User.Id, sum);
             User.Money += sum;
-            listBox1.Items.Add(msg);
-            MoneyLabel.Text = User.Money.ToString() + " грн";
+            //listBox1.Items.Add(msg);
+            MoneyLabel.Text = User.Money.ToString() + " $";
         }
 
         private void WithdrawMoneyBtn_Click(object sender, EventArgs e)
@@ -89,20 +89,20 @@ namespace BankClient
 
             if (sum <= 0)
             {
-                MessageBox.Show("Сума не може бути від'ємним числом!");
+                MessageBox.Show("MUST BE POSITIVE");
                 return;
             }
 
             if (sum > User.Money)
             {
-                MessageBox.Show("Ви намагаєтесь зняти більше коштів ніж у вас є на рахунку!\nОперація відмінена");
+                MessageBox.Show("CANCELED!\nNOT EBOUNG MONEY");
                 return;
             }
 
             string msg = Client.WithdrawMoney(User.Id, sum);
             User.Money -= sum;
-            listBox1.Items.Add(msg);
-            MoneyLabel.Text = User.Money.ToString() + " грн";
+            //listBox1.Items.Add(msg);
+            MoneyLabel.Text = User.Money.ToString() + " $";
         }
 
         private void SendMoneyBtn_Click(object sender, EventArgs e)
@@ -118,32 +118,32 @@ namespace BankClient
 
             if (sum <= 0)
             {
-                MessageBox.Show("Сума не може бути від'ємним числом!");
+                MessageBox.Show("MUST BE POSITIVE");
                 return;
             }
 
             if (sum > User.Money)
             {
-                MessageBox.Show("Ви намагаєтесь перевести більше коштів ніж у вас є на рахунку!\nОперація відмінена");
+                MessageBox.Show("CANCELED!\nNOT EBOUNG MONEY");
                 return;
             }
             string msg = Client.MoneyTransfer(User.Id, numberToTrans, sum);
             if (msg == null)
             {
-                MessageBox.Show("Помилка! Номер, на який ви намагаєтесь перевести кошти не зареєстровано.");
+                MessageBox.Show("CARD NUMBER NOT FOUNF");
                 return;
             }
             
-            listBox1.Items.Add(msg);
+            //listBox1.Items.Add(msg);
             User.Money -= sum;
-            MoneyLabel.Text = User.Money.ToString() + " грн";
+            MoneyLabel.Text = User.Money.ToString() + " $";
         }
 
         public void GettingMoney(Transaction transaction)
         {
-            listBox1.Items.Add($"Отримання коштів від {transaction.TelephoneFrom} в розмірі {transaction.Money} грн.");
+            //listBox1.Items.Add($"Отримання коштів від {transaction.TelephoneFrom} в розмірі {transaction.Money} грн.");
             User.Money += transaction.Money;
-            MoneyLabel.Text = User.Money.ToString() + " грн";
+            MoneyLabel.Text = User.Money.ToString() + " $";
         }
     }
 }

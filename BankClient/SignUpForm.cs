@@ -25,13 +25,13 @@ namespace BankClient
         {
             if(LoginTextbox.Text.Length != 10)
             {
-                MessageBox.Show("Номер телефону введено неправильно.");
+                MessageBox.Show("WRONG CARD NUMBER");
                 return;
             }
             
             if(PasswordTextbox.Text.Length <= 5)
             {
-                MessageBox.Show("Пароль має бути більше 5 символів");
+                MessageBox.Show("AT LEAST 5 CHARACTERS");
                 return;
             }
 
@@ -39,11 +39,11 @@ namespace BankClient
             
             if (!state)
             {
-                MessageBox.Show("Такий акаунт вже зареєстровано");
+                MessageBox.Show("THIS ACCOUNT IS ALREADY EXIST");
                 return;
             }
 
-            MessageBox.Show("Акаунт успішно створено. Увійдіть у нього");
+            MessageBox.Show("SUCCESFULLY CREATED");
             
             this.Hide();
         }

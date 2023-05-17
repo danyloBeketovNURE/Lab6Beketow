@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.PhoneNumberLable = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -37,242 +36,178 @@
             this.AddMoneyBtn = new System.Windows.Forms.Button();
             this.WithdrawMoneyBtn = new System.Windows.Forms.Button();
             this.SendMoneyBtn = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.addMoneyBox = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.withdrawMoneyBox = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.SumForTransactionBox = new System.Windows.Forms.TextBox();
             this.NumberToTransactionBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.HotTrack;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(11, 418);
+            this.label1.Location = new System.Drawing.Point(294, 104);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(141, 29);
+            this.label1.Size = new System.Drawing.Size(132, 25);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Мій номер:";
-            // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 20;
-            this.listBox1.Location = new System.Drawing.Point(456, 12);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(514, 384);
-            this.listBox1.TabIndex = 2;
+            this.label1.Text = "Card number:";
             // 
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.linkLabel1.Location = new System.Drawing.Point(11, 9);
+            this.linkLabel1.LinkColor = System.Drawing.Color.Red;
+            this.linkLabel1.Location = new System.Drawing.Point(295, 36);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(69, 25);
+            this.linkLabel1.Size = new System.Drawing.Size(64, 20);
             this.linkLabel1.TabIndex = 8;
             this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Вийти";
+            this.linkLabel1.Text = "LogOut";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // PhoneNumberLable
             // 
             this.PhoneNumberLable.AutoSize = true;
             this.PhoneNumberLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.PhoneNumberLable.Location = new System.Drawing.Point(158, 418);
+            this.PhoneNumberLable.Location = new System.Drawing.Point(440, 104);
             this.PhoneNumberLable.Name = "PhoneNumberLable";
-            this.PhoneNumberLable.Size = new System.Drawing.Size(0, 29);
+            this.PhoneNumberLable.Size = new System.Drawing.Size(0, 25);
             this.PhoneNumberLable.TabIndex = 0;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.SystemColors.HotTrack;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(451, 418);
+            this.label3.Location = new System.Drawing.Point(294, 69);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(102, 29);
+            this.label3.Size = new System.Drawing.Size(146, 25);
             this.label3.TabIndex = 0;
-            this.label3.Text = "Баланс:";
+            this.label3.Text = "Money balance";
             // 
             // MoneyLabel
             // 
             this.MoneyLabel.AutoSize = true;
+            this.MoneyLabel.BackColor = System.Drawing.SystemColors.HotTrack;
             this.MoneyLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.MoneyLabel.Location = new System.Drawing.Point(559, 418);
+            this.MoneyLabel.Location = new System.Drawing.Point(446, 69);
             this.MoneyLabel.Name = "MoneyLabel";
-            this.MoneyLabel.Size = new System.Drawing.Size(72, 29);
+            this.MoneyLabel.Size = new System.Drawing.Size(39, 25);
             this.MoneyLabel.TabIndex = 0;
-            this.MoneyLabel.Text = "0 грн";
+            this.MoneyLabel.Text = "0 $";
             // 
             // AddMoneyBtn
             // 
-            this.AddMoneyBtn.Location = new System.Drawing.Point(295, 8);
+            this.AddMoneyBtn.Location = new System.Drawing.Point(161, 12);
+            this.AddMoneyBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AddMoneyBtn.Name = "AddMoneyBtn";
-            this.AddMoneyBtn.Size = new System.Drawing.Size(129, 55);
+            this.AddMoneyBtn.Size = new System.Drawing.Size(115, 44);
             this.AddMoneyBtn.TabIndex = 2;
-            this.AddMoneyBtn.Text = "Поповнити рахунок";
+            this.AddMoneyBtn.Text = "replenish balance";
             this.AddMoneyBtn.UseVisualStyleBackColor = true;
             this.AddMoneyBtn.Click += new System.EventHandler(this.AddMoneyBtn_Click);
             // 
             // WithdrawMoneyBtn
             // 
-            this.WithdrawMoneyBtn.Location = new System.Drawing.Point(295, 9);
+            this.WithdrawMoneyBtn.Location = new System.Drawing.Point(161, 69);
+            this.WithdrawMoneyBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.WithdrawMoneyBtn.Name = "WithdrawMoneyBtn";
-            this.WithdrawMoneyBtn.Size = new System.Drawing.Size(129, 48);
+            this.WithdrawMoneyBtn.Size = new System.Drawing.Size(115, 38);
             this.WithdrawMoneyBtn.TabIndex = 4;
-            this.WithdrawMoneyBtn.Text = "Зняти кошти";
+            this.WithdrawMoneyBtn.Text = "take money";
             this.WithdrawMoneyBtn.UseVisualStyleBackColor = true;
             this.WithdrawMoneyBtn.Click += new System.EventHandler(this.WithdrawMoneyBtn_Click);
             // 
             // SendMoneyBtn
             // 
-            this.SendMoneyBtn.Location = new System.Drawing.Point(295, 6);
+            this.SendMoneyBtn.Location = new System.Drawing.Point(196, 144);
+            this.SendMoneyBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SendMoneyBtn.Name = "SendMoneyBtn";
-            this.SendMoneyBtn.Size = new System.Drawing.Size(129, 104);
+            this.SendMoneyBtn.Size = new System.Drawing.Size(115, 83);
             this.SendMoneyBtn.TabIndex = 7;
-            this.SendMoneyBtn.Text = "Перевести кошти";
+            this.SendMoneyBtn.Text = "SEND";
             this.SendMoneyBtn.UseVisualStyleBackColor = true;
             this.SendMoneyBtn.Click += new System.EventHandler(this.SendMoneyBtn_Click);
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.addMoneyBox);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.AddMoneyBtn);
-            this.panel1.Location = new System.Drawing.Point(12, 40);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(438, 74);
-            this.panel1.TabIndex = 5;
-            // 
             // addMoneyBox
             // 
-            this.addMoneyBox.Location = new System.Drawing.Point(7, 29);
+            this.addMoneyBox.Location = new System.Drawing.Point(12, 23);
+            this.addMoneyBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.addMoneyBox.Name = "addMoneyBox";
-            this.addMoneyBox.Size = new System.Drawing.Size(263, 26);
+            this.addMoneyBox.Size = new System.Drawing.Size(143, 22);
             this.addMoneyBox.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(3, 6);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(267, 20);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Сума для поповнення рахунку:";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.withdrawMoneyBox);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.WithdrawMoneyBtn);
-            this.panel2.Location = new System.Drawing.Point(12, 120);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(438, 69);
-            this.panel2.TabIndex = 5;
             // 
             // withdrawMoneyBox
             // 
-            this.withdrawMoneyBox.Location = new System.Drawing.Point(7, 29);
+            this.withdrawMoneyBox.Location = new System.Drawing.Point(12, 77);
+            this.withdrawMoneyBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.withdrawMoneyBox.Name = "withdrawMoneyBox";
-            this.withdrawMoneyBox.Size = new System.Drawing.Size(263, 26);
+            this.withdrawMoneyBox.Size = new System.Drawing.Size(143, 22);
             this.withdrawMoneyBox.TabIndex = 3;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(3, 6);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(220, 20);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Сума для зняття коштів:";
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.SumForTransactionBox);
-            this.panel3.Controls.Add(this.NumberToTransactionBox);
-            this.panel3.Controls.Add(this.label6);
-            this.panel3.Controls.Add(this.label5);
-            this.panel3.Controls.Add(this.SendMoneyBtn);
-            this.panel3.Location = new System.Drawing.Point(12, 197);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(438, 120);
-            this.panel3.TabIndex = 5;
             // 
             // SumForTransactionBox
             // 
-            this.SumForTransactionBox.Location = new System.Drawing.Point(7, 84);
+            this.SumForTransactionBox.Location = new System.Drawing.Point(12, 195);
+            this.SumForTransactionBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SumForTransactionBox.Name = "SumForTransactionBox";
-            this.SumForTransactionBox.Size = new System.Drawing.Size(263, 26);
+            this.SumForTransactionBox.Size = new System.Drawing.Size(178, 22);
             this.SumForTransactionBox.TabIndex = 6;
             // 
             // NumberToTransactionBox
             // 
-            this.NumberToTransactionBox.Location = new System.Drawing.Point(7, 29);
+            this.NumberToTransactionBox.Location = new System.Drawing.Point(12, 153);
+            this.NumberToTransactionBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.NumberToTransactionBox.Name = "NumberToTransactionBox";
-            this.NumberToTransactionBox.Size = new System.Drawing.Size(263, 26);
+            this.NumberToTransactionBox.Size = new System.Drawing.Size(178, 22);
             this.NumberToTransactionBox.TabIndex = 5;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.Location = new System.Drawing.Point(3, 61);
+            this.label6.Location = new System.Drawing.Point(9, 177);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(223, 20);
+            this.label6.Size = new System.Drawing.Size(61, 17);
             this.label6.TabIndex = 5;
-            this.label6.Text = "Сумма для переведення:";
+            this.label6.Text = "amount";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(3, 6);
+            this.label5.Location = new System.Drawing.Point(9, 135);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(267, 20);
+            this.label5.Size = new System.Drawing.Size(181, 17);
             this.label5.TabIndex = 5;
-            this.label5.Text = "Перевести кошти за номером:";
+            this.label5.Text = "recipient`s card number";
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(982, 456);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(624, 266);
+            this.Controls.Add(this.addMoneyBox);
+            this.Controls.Add(this.withdrawMoneyBox);
+            this.Controls.Add(this.AddMoneyBtn);
+            this.Controls.Add(this.SumForTransactionBox);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.WithdrawMoneyBtn);
+            this.Controls.Add(this.NumberToTransactionBox);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.linkLabel1);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.SendMoneyBtn);
             this.Controls.Add(this.MoneyLabel);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.PhoneNumberLable);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Bank";
+            this.Text = "UserInterface";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -281,7 +216,6 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        public System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label PhoneNumberLable;
         private System.Windows.Forms.Label label3;
@@ -289,13 +223,8 @@
         private System.Windows.Forms.Button AddMoneyBtn;
         private System.Windows.Forms.Button WithdrawMoneyBtn;
         private System.Windows.Forms.Button SendMoneyBtn;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox addMoneyBox;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox withdrawMoneyBox;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox SumForTransactionBox;
         private System.Windows.Forms.TextBox NumberToTransactionBox;
         private System.Windows.Forms.Label label6;

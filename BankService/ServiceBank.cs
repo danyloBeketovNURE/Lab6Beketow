@@ -76,7 +76,7 @@ namespace BankService
                 user.Money += money;
                 context.SaveChanges();
             }
-            return $"Рахунок поповнено на {money} грн.";
+            return $"COUNTED {money} $.";
         }
        
         public string WithdrawMoney(int id, double money)
@@ -87,7 +87,7 @@ namespace BankService
                 user.Money -= money;
                 context.SaveChanges();
             }
-            return $"З рахунку було знято {money} грн.";
+            return $"TAKEN {money} $.";
         }
 
         public string MoneyTransfer(int idFrom, string TelephoneTo ,double money)
@@ -113,7 +113,7 @@ namespace BankService
                         serverUser.operationContext.GetCallbackChannel<IServiceBankCallback>()
                             .GettingMoney(transaction);
                     }
-                    return $"Переказ коштів за номером {TelephoneTo} в розмірі {money} грн.";
+                    return $"RECIPIENT`S CARD: {TelephoneTo} SENT {money} $.";
                 }
                 return null;
             }
